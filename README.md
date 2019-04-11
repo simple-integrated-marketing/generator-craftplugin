@@ -22,7 +22,7 @@ Requires Node version 4.0.0 or later.
 
 To create a new Craft CMS plugin and use generator-simplecraftplugin to scaffold it:
 
-    yo craftplugin
+    yo simplecraftplugin
 
 generator-simplecraftplugin will ask you a few questions:
 
