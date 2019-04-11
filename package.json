@@ -1,20 +1,19 @@
 {
-  "name": "generator-craftplugin",
+  "name": "generator-simplecraftplugin",
   "version": "1.4.3",
-  "description": "generator-craftplugin is a Yeoman generator for Craft CMS plugins",
+  "description": "generator-simplecraftplugin is a Yeoman generator for Craft CMS plugins customised for Simple",
   "main": "app/index.js",
   "files": [
     "app"
   ],
-  "repository": "nystudio107/generator-craftplugin",
   "keywords": [
     "yeoman-generator",
-    "generator-craftplugin",
+    "generator-simplecraftplugin",
     "craft-cms",
     "plugin",
     "craft"
   ],
-  "author": "nystudio107",
+  "author": "Simple Integrated Marketing",
   "license": "MIT",
   "dependencies": {
     "ncp": "^2.0.0",

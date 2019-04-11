@@ -6,13 +6,13 @@
             "type": "input",
             "name": "pluginName",
             "message": "Plugin name:",
-            "default": "Generic"
+            "default": "Simple Plugin"
         },
         {
             "type": "input",
             "name": "pluginDescription",
             "message": "Short description of the plugin:",
-            "default": "This is a generic Craft CMS plugin"
+            "default": "This is another awesome plugin crafted by Simple ❤️."
         },
         {
             "type": "input",
@@ -25,42 +25,29 @@
             "type": "input",
             "name": "pluginAuthorName",
             "message": "Plugin author name:",
-            "default": "John Doe",
+            "default": "Simple Integrated Marketing",
             "store": true
         },
         {
             "type": "input",
             "name": "pluginVendorName",
             "message": "Plugin vendor name:",
-            "default": "Doe Enterprises",
+            "default": "Simple",
             "store": true
         },
         {
             "type": "input",
             "name": "pluginAuthorUrl",
             "message": "Plugin author URL:",
-            "default": "http://DoeDesign.com/",
+            "default": "https://simple.com.au",
             "store": true
         },
         {
             "type": "input",
             "name": "pluginAuthorGithub",
-            "message": "Plugin author GitHub.com name:",
+            "message": "Github author name",
+            "default": "simpleim",
             "store": true
-        },
-        {
-            "type": "checkbox",
-            "name": "codeComments",
-            "message": "Should there be code comments generated:",
-            "store": true,
-            "choices": [
-                {
-                    "key": "codeComments",
-                    "name": "Code Comments",
-                    "value": "codeComments",
-                    "checked": true
-                }
-            ]
         },
         {
             "type": "checkbox",
@@ -397,10 +384,10 @@
         {
             "src": "src/assetbundles/fieldresources/_FieldAssetBundle.php",
             "destDir": "src/assetbundles/",
-            "dest": "FieldAsset.php",
+            "dest": "Asset.php",
             "requires": ["fieldtypes"],
             "subPrefix": "fieldName",
-            "dirSubPrefix": "field/",
+            "dirSubPrefix": "/",
             "prefix": false
         },
         {
@@ -409,7 +396,7 @@
             "dest": "-icon.svg",
             "requires": ["fieldtypes"],
             "subPrefix": "fieldName",
-            "dirSubPrefix": "field/dist/img/",
+            "dirSubPrefix": "/dist/img/",
             "justCopy": true,
             "prefix": false
         },
@@ -419,7 +406,7 @@
             "dest": ".css",
             "requires": ["fieldtypes"],
             "subPrefix": "fieldName",
-            "dirSubPrefix": "field/dist/css/",
+            "dirSubPrefix": "/dist/css/",
             "prefix": false
         },
         {
@@ -428,7 +415,7 @@
             "dest": ".js",
             "requires": ["fieldtypes"],
             "subPrefix": "fieldName",
-            "dirSubPrefix": "field/dist/js/",
+            "dirSubPrefix": "/dist/js/",
             "prefix": false
         },
         {
@@ -489,10 +476,10 @@
         {
             "src": "src/assetbundles/utilityresources/_UtilityAssetBundle.php",
             "destDir": "src/assetbundles/",
-            "dest": "UtilityAsset.php",
+            "dest": "Asset.php",
             "requires": ["utilities"],
             "subPrefix": "utilityName",
-            "dirSubPrefix": "utility/",
+            "dirSubPrefix": "/",
             "prefix": false
         },
         {
@@ -501,7 +488,7 @@
             "dest": "-icon.svg",
             "requires": ["utilities"],
             "subPrefix": "utilityName",
-            "dirSubPrefix": "utility/dist/img/",
+            "dirSubPrefix": "/dist/img/",
             "prefix": false
         },
         {
@@ -510,7 +497,7 @@
             "dest": ".css",
             "requires": ["utilities"],
             "subPrefix": "utilityName",
-            "dirSubPrefix": "utility/dist/css/",
+            "dirSubPrefix": "/dist/css/",
             "prefix": false
         },
         {
@@ -519,7 +506,7 @@
             "dest": ".js",
             "requires": ["utilities"],
             "subPrefix": "utilityName",
-            "dirSubPrefix": "utility/dist/js/",
+            "dirSubPrefix": "/dist/js/",
             "prefix": false
         },
         {
@@ -549,10 +536,10 @@
         {
             "src": "src/assetbundles/widgetresources/_WidgetAssetBundle.php",
             "destDir": "src/assetbundles/",
-            "dest": "WidgetAsset.php",
+            "dest": "Asset.php",
             "requires": ["widgets"],
             "subPrefix": "widgetName",
-            "dirSubPrefix": "widget/",
+            "dirSubPrefix": "/",
             "prefix": false
         },
         {
@@ -561,7 +548,7 @@
             "dest": "-icon.svg",
             "requires": ["widgets"],
             "subPrefix": "widgetName",
-            "dirSubPrefix": "widget/dist/img/",
+            "dirSubPrefix": "/dist/img/",
             "justCopy": true,
             "prefix": false
         },
@@ -571,7 +558,7 @@
             "dest": ".css",
             "requires": ["widgets"],
             "subPrefix": "widgetName",
-            "dirSubPrefix": "widget/dist/css/",
+            "dirSubPrefix": "/dist/css/",
             "prefix": false
         },
         {
@@ -580,7 +567,7 @@
             "dest": ".js",
             "requires": ["widgets"],
             "subPrefix": "widgetName",
-            "dirSubPrefix": "widget/dist/js/",
+            "dirSubPrefix": "/dist/js/",
             "prefix": false
         },
         {

@@ -11,7 +11,7 @@
 namespace <%= pluginVendorName %>\<%= pluginDirName %>\fields;
 
 use <%= pluginVendorName %>\<%= pluginDirName%>\<%= pluginHandle %>;
-use <%= pluginVendorName %>\<%= pluginDirName %>\assetbundles\<%= fieldName[index].toLowerCase() %>field\<%= fieldName[index] %>FieldAsset;
+use <%= pluginVendorName %>\<%= pluginDirName %>\assetbundles\<%= fieldName[index].toLowerCase() %>field\<%= fieldName[index] %>Asset;
 
 use Craft;
 use craft\base\ElementInterface;
@@ -392,7 +392,7 @@ class <%= fieldName[index] %> extends Field
     public function getInputHtml($value, ElementInterface $element = null): string
     {
         // Register our asset bundle
-        Craft::$app->getView()->registerAssetBundle(<%= fieldName[index] %>FieldAsset::class);
+        Craft::$app->getView()->registerAssetBundle(<%= fieldName[index] %>Asset::class);
 
         // Get our id and namespace
         $id = Craft::$app->getView()->formatInputId($this->handle);

@@ -11,7 +11,7 @@
 namespace <%= pluginVendorName %>\<%= pluginDirName %>\widgets;
 
 use <%= pluginVendorName %>\<%= pluginDirName%>\<%= pluginHandle %>;
-use <%= pluginVendorName %>\<%= pluginDirName %>\assetbundles\<%= widgetName[index].toLowerCase() %>widget\<%= widgetName[index] %>WidgetAsset;
+use <%= pluginVendorName %>\<%= pluginDirName %>\assetbundles\<%= widgetName[index].toLowerCase() %>widget\<%= widgetName[index] %>Asset;
 
 use Craft;
 use craft\base\Widget;
@@ -87,7 +87,7 @@ class <%= widgetName[index] %> extends Widget
 <% } -%>
     public static function iconPath()
     {
-        return Craft::getAlias("@<%= pluginVendorName %>/<%= pluginDirName %>/assetbundles/<%= widgetName[index].toLowerCase() %>widget/dist/img/<%= widgetName[index] %>-icon.svg");
+        return Craft::getAlias("@<%= pluginVendorName %>/<%= pluginDirName %>/assetbundles/<%= widgetName[index].toLowerCase() %>/dist/img/<%= widgetName[index] %>-icon.svg");
     }
 
 <% if ((typeof codeComments !== 'undefined') && (codeComments)) { -%>
@@ -261,7 +261,7 @@ class <%= widgetName[index] %> extends Widget
 <% } -%>
     public function getBodyHtml()
     {
-        Craft::$app->getView()->registerAssetBundle(<%= widgetName[index] %>WidgetAsset::class);
+        Craft::$app->getView()->registerAssetBundle(<%= widgetName[index] %>Asset::class);
 
         return Craft::$app->getView()->renderTemplate(
             '<%= pluginKebabHandle %>/_components/widgets/<%= widgetName[index] %>_body',

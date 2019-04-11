@@ -1,6 +1,6 @@
-# generator-craftplugin
+# generator-simplecraftplugin
 
-generator-craftplugin is a [Yeoman](http://yeoman.io) generator for [Craft CMS](http://www.buildwithcraft.com) plugins
+generator-simplecraftplugin is a [Yeoman](http://yeoman.io) generator for [Craft CMS](http://www.buildwithcraft.com) plugins
 
 Type just `yo craftplugin` and a new Craft CMS plugin tailored to your liking will be created.
 
@@ -10,21 +10,21 @@ You can also access the generator via the web at [pluginfactory.io](http://plugi
 
 This assumes you have `nodejs`, `npm`, and `yeoman` installed already.
 
-1. Download & unzip the file and place the `generator-craftplugin` directory onto your dev machine
-2.  -OR- do a `git clone https://github.com/nystudio107/generator-craftplugin.git` directly onto your dev machine.  You can then update it with `git pull`
-3. On the command line, from the root of the generator-craftplugin project (in the `generator-craftplugin/` folder), type: `npm link` to install the project dependencies and symlink a global module.  On some setups, you may have to do `sudo npm link --no-bin-links`
-4.  -OR- do an `npm -g install generator-craftplugin` to install it via npm (and thus skip the `npm link` step)
-5. The generator folder should be named `generator-craftplugin`.  GitHub recently started appending `-master` (the branch name) to the name of the folder for zip file downloads.
+1. Download & unzip the file and place the `generator-simplecraftplugin` directory onto your dev machine
+2.  -OR- do a `git clone https://github.com/nystudio107/generator-simplecraftplugin.git` directly onto your dev machine.  You can then update it with `git pull`
+3. On the command line, from the root of the generator-simplecraftplugin project (in the `generator-simplecraftplugin/` folder), type: `npm link` to install the project dependencies and symlink a global module.  On some setups, you may have to do `sudo npm link --no-bin-links`
+4.  -OR- do an `npm -g install generator-simplecraftplugin` to install it via npm (and thus skip the `npm link` step)
+5. The generator folder should be named `generator-simplecraftplugin`.  GitHub recently started appending `-master` (the branch name) to the name of the folder for zip file downloads.
 
 Requires Node version 4.0.0 or later.
 
 ## Usage
 
-To create a new Craft CMS plugin and use generator-craftplugin to scaffold it:
+To create a new Craft CMS plugin and use generator-simplecraftplugin to scaffold it:
 
     yo craftplugin
 
-generator-craftplugin will ask you a few questions:
+generator-simplecraftplugin will ask you a few questions:
 
 * **Plugin name:** - enter the name of your plugin
 * **Short description of the plugin:** - enter a short (around 120 characters or less) description of the plugin and what it does
@@ -36,7 +36,7 @@ generator-craftplugin will ask you a few questions:
 
 If you selected `Controllers`, `ElementTypes`, `FieldTypes`, `Models`, `Purchasables`. `Records`, `Services`, `Tasks`, or `Widgets` components, it will also ask you for a name for each one, respectively.  If you want multiple components, just separate them with a , in the name input.
 
-generator-craftplugin will then do the following for you:
+generator-simplecraftplugin will then do the following for you:
 
 1. Create the `pluginname` directory in the current directory, properly lower-cased and stripped of spaces
 2. Create all of the properly named, documented files & folders for your new Craft CMS plugin
@@ -45,7 +45,7 @@ The code generated conforms to Pixel & Tonic's [Coding Standards](https://github
 
 ### Sample Output
 
-Here's an example of the output from a `yo craftplugin` generator:
+Here's an example of the output from a `yo simplecraftplugin` generator:
 
 ```
 [ Initializing ]
@@ -362,7 +362,7 @@ The `craftplugin` generator can also be passed arguments via the command line, b
 
 ## Adding to an existing plugin
 
-As of version 1.3.0, the `generator-craftplugin` creates a `.craftplugin` project file in your plugin's root folder that contains all of the information needed to create the plugin scaffolding. If you have Yeoman and the `generator-craftplugin` installed locally, you can then `cd` to the directory and add components as you see fit.
+As of version 1.3.0, the `generator-simplecraftplugin` creates a `.craftplugin` project file in your plugin's root folder that contains all of the information needed to create the plugin scaffolding. If you have Yeoman and the `generator-simplecraftplugin` installed locally, you can then `cd` to the directory and add components as you see fit.
 
 Here's a video showing how that works:
 
@@ -418,4 +418,4 @@ Here's a list of meta parameters that you can also pass in, to override what is 
     --pluginAuthorGithub=""
     --codeComments=""
 
-Brought to you by [nystudio107](http://nystudio107.com)
+Brought to you by [nystudio107](http://nystudio107.com) Modified by [Simple Integrated Marketing](https://simple.com.au)

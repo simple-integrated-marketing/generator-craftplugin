@@ -99,6 +99,15 @@ use craft\events\RegisterComponentTypesEvent;
 use craft\events\RegisterUrlRulesEvent;
 <% } -%>
 
+<% if (pluginComponents.indexOf('services') >= 0){ -%>
+<% var components = serviceName -%>
+<% if ((typeof(components[0]) !== 'undefined') && (components[0] !== "")) { -%>
+<% components.forEach(function(component, index, array){ -%>
+use <%= pluginVendorName %>\<%= pluginDirName%>\services\<%= component%>;
+<% }); -%>
+<% } -%>
+<% } -%>
+
 use yii\base\Event;
 
 <% if ((typeof codeComments !== 'undefined') && (codeComments)) { -%>
@@ -169,6 +178,13 @@ class <%= pluginHandle %> extends Plugin
     // Public Properties
     // =========================================================================
 
+<% if (pluginComponents.indexOf('settings') >= 0){ -%>
+    public $hasCpSettings = true;
+<% } -%>
+<% if (pluginComponents.indexOf('cpsection') >= 0){ -%>
+    public $hasCpSection = true;
+<% } -%>
+
 <% if ((typeof codeComments !== 'undefined') && (codeComments)) { -%>
     /**
      * To execute your plugin’s migrations, you’ll need to increase its schema version.
@@ -206,6 +222,16 @@ class <%= pluginHandle %> extends Plugin
     {
         parent::init();
         self::$plugin = $this;
+        $this->setComponents([
+<% if (pluginComponents.indexOf('services') >= 0){ -%>
+    <% var components = serviceName -%>
+    <% if ((typeof(components[0]) !== 'undefined') && (components[0] !== "")) { -%>
+    <% components.forEach(function(component, index, array){ -%>
+        "<%= (component[0].toLowerCase() + component.slice(1)).replace('Service','') %>" => <%= component%>::class,
+    <% }); -%>
+    <% } -%>
+<% } -%>
+        ]);
 <% if (pluginComponents.indexOf('twigextensions') >= 0){ -%>
 
 <% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>

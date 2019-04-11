@@ -11,7 +11,7 @@
 namespace <%= pluginVendorName %>\<%= pluginDirName %>\utilities;
 
 use <%= pluginVendorName %>\<%= pluginDirName%>\<%= pluginHandle %>;
-use <%= pluginVendorName %>\<%= pluginDirName %>\assetbundles\<%= utilityName[index].toLowerCase() %>utility\<%= utilityName[index] %>UtilityAsset;
+use <%= pluginVendorName %>\<%= pluginDirName %>\assetbundles\<%= utilityName[index].toLowerCase() %>utility\<%= utilityName[index] %>Asset;
 
 use Craft;
 use craft\base\Utility;
@@ -89,7 +89,7 @@ class <%= utilityName[index] %> extends Utility
 <% } -%>
     public static function iconPath()
     {
-        return Craft::getAlias("@<%= pluginVendorName %>/<%= pluginDirName %>/assetbundles/<%= utilityName[index].toLowerCase() %>utility/dist/img/<%= utilityName[index] %>-icon.svg");
+        return Craft::getAlias("@<%= pluginVendorName %>/<%= pluginDirName %>/assetbundles/<%= utilityName[index].toLowerCase() %>/dist/img/<%= utilityName[index] %>-icon.svg");
     }
 
 <% if ((typeof codeComments !== 'undefined') && (codeComments)) { -%>
@@ -123,7 +123,7 @@ class <%= utilityName[index] %> extends Utility
 <% } -%>
     public static function contentHtml(): string
     {
-        Craft::$app->getView()->registerAssetBundle(<%= utilityName[index] %>UtilityAsset::class);
+        Craft::$app->getView()->registerAssetBundle(<%= utilityName[index] %>Asset::class);
 
         $someVar = 'Have a nice day!';
         return Craft::$app->getView()->renderTemplate(

@@ -16,7 +16,7 @@ use craft\web\assets\cp\CpAsset;
 
 <% if ((typeof codeComments !== 'undefined') && (codeComments)) { -%>
 /**
- * <%= fieldName[index] %>FieldAsset AssetBundle
+ * <%= fieldName[index] %>Asset AssetBundle
  *
  * AssetBundle represents a collection of asset files, such as CSS, JS, images.
  *
@@ -40,7 +40,7 @@ use craft\web\assets\cp\CpAsset;
  * @since     <%= pluginVersion %>
  */
 <% } -%>
-class <%= fieldName[index] %>FieldAsset extends AssetBundle
+class <%= fieldName[index] %>Asset extends AssetBundle
 {
     // Public Methods
     // =========================================================================
@@ -59,7 +59,7 @@ class <%= fieldName[index] %>FieldAsset extends AssetBundle
 <% if ((typeof codeComments !== 'undefined') && (codeComments)) { -%>
         // define the path that your publishable resources live
 <% } -%>
-        $this->sourcePath = "@<%= pluginVendorName %>/<%= pluginDirName %>/assetbundles/<%= fieldName[index].toLowerCase() %>field/dist";
+        $this->sourcePath = "@<%= pluginVendorName %>/<%= pluginDirName %>/assetbundles/<%= fieldName[index].toLowerCase() %>/dist";
 
 <% if ((typeof codeComments !== 'undefined') && (codeComments)) { -%>
         // define the dependencies

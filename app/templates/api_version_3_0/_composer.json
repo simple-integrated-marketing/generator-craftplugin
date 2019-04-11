@@ -32,27 +32,7 @@
     "extra": {
         "name": "<%- pluginName %>",
         "handle": "<%= pluginKebabHandle %>",
-<% if (pluginComponents.indexOf('settings') >= 0){ -%>
-        "hasCpSettings": true,
-<% } else { -%>
-        "hasCpSettings": false,
-<% } -%>
-<% if (pluginComponents.indexOf('cpsection') >= 0){ -%>
-        "hasCpSection": true,
-<% } else { -%>
-        "hasCpSection": false,
-<% } -%>
         "changelogUrl": "<%= pluginChangelogUrl %>",
-<% if (pluginComponents.indexOf('services') >= 0){ -%>
-<% var components = serviceName -%>
-<% if ((typeof(components[0]) !== 'undefined') && (components[0] !== "")) { -%>
-        "components": {
-<% components.forEach(function(component, index, array){ -%>
-            "<%= component[0].toLowerCase() + component.slice(1) %>": "<%= pluginVendorName %>\\<%= pluginDirName%>\\services\\<%= component%>"<% if (index !== array.length - 1) { %>,<% } %>
-<% }); -%>
-        },
-<% } -%>
-<% } -%>
         "class": "<%= pluginVendorName %>\\<%= pluginDirName %>\\<%= pluginHandle %>"
     }
 }
