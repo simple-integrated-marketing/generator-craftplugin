@@ -1,6 +1,5 @@
 {
   "name": "generator-simplecraftplugin",
-  "version": "1.4.5",
   "description": "generator-simplecraftplugin is a Yeoman generator for Craft CMS plugins customised for Simple",
   "main": "app/index.js",
   "files": [

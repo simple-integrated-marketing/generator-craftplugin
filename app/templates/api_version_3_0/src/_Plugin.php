@@ -99,14 +99,6 @@ use craft\events\RegisterComponentTypesEvent;
 use craft\events\RegisterUrlRulesEvent;
 <% } -%>
 
-<% if (pluginComponents.indexOf('services') >= 0){ -%>
-<% var components = serviceName -%>
-<% if ((typeof(components[0]) !== 'undefined') && (components[0] !== "")) { -%>
-<% components.forEach(function(component, index, array){ -%>
-use <%= pluginVendorName %>\<%= pluginDirName%>\services\<%= component%>;
-<% }); -%>
-<% } -%>
-<% } -%>
 
 use yii\base\Event;
 
