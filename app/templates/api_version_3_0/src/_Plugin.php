@@ -219,7 +219,7 @@ class <%= pluginHandle %> extends Plugin
     <% var components = serviceName -%>
     <% if ((typeof(components[0]) !== 'undefined') && (components[0] !== "")) { -%>
     <% components.forEach(function(component, index, array){ -%>
-        "<%= (component[0].toLowerCase() + component.slice(1)).replace('Service','') %>" => <%= component%>::class,
+        "<%= (component[0].toLowerCase() + component.slice(1)).replace('Service','') %>" => <%= component%>Service::class,
     <% }); -%>
     <% } -%>
 <% } -%>
