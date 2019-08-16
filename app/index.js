@@ -445,8 +445,8 @@ module.exports = yo.generators.Base.extend({
 
     /* -- Write the answers out to a JSON file */
 
-    fs.writeFile(this.destDir + PLUGIN_CONF_FILE_NAME, this.rawAnswers, {
-      encoding:"utf8"
+    fs.writeFile(this.destDir + PLUGIN_CONF_FILE_NAME, "utf8", (error) => {
+      console.log(error);
     });
   },
 
